@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrow Example</title>
+	
+	<style src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></style>
+	
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+	<script src="../ngc-arrow.js"></script>
+	
+	<script>
+		angular.module('ngc.example', ['ngc.arrow']);
+    </script>
+</head>
+
+<body ng-app="ngc.example">
+    <span id="from">From</span>
+	<span id="to" style="position: absolute; top: 400px; left: 50%;">To</span>
+	<canvas-arrow width="2" segments="4" dampener="-0.6" color="#1fbffb"
+		from-element="#from" from-orientation="right" from-offset-x="15"
+		to-element="#to" to-orientation="top" to-offset-y="-15">
+	</canvas-arrow>
+	<canvas-arrow width="5" segments="2" dampener="1.4" color="#cccccc"
+		from-element="#from" from-orientation="bottom" from-offset-y="15"
+		to-element="#to" to-orientation="left" to-offset-x="-15">
+	</canvas-arrow>
+</body>
+
+</html>
